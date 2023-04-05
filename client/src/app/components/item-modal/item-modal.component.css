@@ -1,0 +1,68 @@
+.item-modal-opacity{
+    position: absolute;
+    width: 90%;
+    height: 83vh;
+    background-color: rgb(32, 32, 32);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    /* justify-content: center; */
+    border-radius: 20px;
+}
+
+.view-item-name{
+color: white;
+font-family: "Bungee";
+font-size: 24pt;
+margin-top: 10vh;
+margin-bottom: 5vh;
+}
+
+.item-con{
+    width: 90%;
+    height: 55vh;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: row;
+
+}
+
+.view-item-img{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    /* background-color: green; */
+}
+
+.information-con{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    /* background-color: purple;  */
+}
+
+.view-item-return{
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    /* background-color: white; */
+    /* border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    border: white solid 5px;
+    background-image: url(../../../assets/cross.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px; */
+    cursor: pointer;
+    color: white;
+    font-family: "Bungee";
+    font-size: 16pt;
+}
+
+

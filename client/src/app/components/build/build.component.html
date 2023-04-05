@@ -1,0 +1,53 @@
+<div class="nav-container">
+  <app-header></app-header>
+</div>
+
+<div class="build-con-pos">
+  <div class="build-con">
+    <div id="model-con">
+      <div class="model-background-img"></div>
+      <div class="selected-item-con" *ngFor="let item of build">
+        <p>Body : {{item.body}}</p>
+        <p>Wheel : {{item.wheels}}</p>
+        <p>Arial : {{item.arial}}</p>
+      </div>
+      <canvas #canvas id="canvas"> </canvas>
+    </div>
+
+    <div class="item-con">
+      <div class="item-card" *ngFor="let item of Items; let i = index">
+        <h2 class="item-name">{{ item.name }}</h2>
+        <div class="img-con">
+          <p>{{ item.qty }}</p>
+          <img class="item-img" [src]="item.img" />
+        </div>
+        <p class="item-type">{{item.type}}</p>
+        <div class="card-infos-con">
+          <div class="card-info-con">
+            <p>Location</p>
+            <p>|</p>
+            <p>{{item.location}}</p>
+          </div>
+        </div>
+        <div class="item-btn-con">
+          <div class="item-btn-use" (click)="buildKart(item, i)" >
+            <p class="view-btn">Use</p>
+          </div>
+          <!-- <div class="item-btn-remove">
+            <p class="view-btn">Remove</p>
+          </div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="build-filter">
+
+  <div [ngClass]="filter === 'Body' ? 'build-btn-active' : 'build-filter-body-btn'" (click)="filter = 'Body'"><p>Body</p></div>
+  <div [ngClass]="filter === 'Wheel' ? 'build-btn-active' : 'build-filter-wheels-btn'" (click)="filter = 'Wheel'"><p>Wheels</p></div>
+  <div [ngClass]="filter === 'Arial' ? 'build-btn-active' : 'build-filter-arials-btn'" (click)="filter = 'Arial'"><p>Arials</p></div>
+  <div class="build-filter-craft-btn"><p>CRAFT</p></div>
+  <!-- <div class="build-filter-craft-btn"><p>Craft</p></div> -->
+</div>

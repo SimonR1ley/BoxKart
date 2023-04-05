@@ -1,0 +1,355 @@
+.build-con-pos{
+  width: 100%;
+  height: 75vh;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 30px; */
+}
+
+.build-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: gray; */
+  height: 100%;
+  /* gap: 5%; */
+  width: 90%;
+  /* position: relative;
+  left: 50%;
+  transform: translateX(-50%); */
+  /* margin-top: 30px; */
+}
+
+#model-con {
+  width: 80%;
+  height: 90%;
+  background-color: green;
+  border-radius: 20px;
+  margin-right: 3%;
+}
+
+.item-con {
+  width: 22%;
+  /* padding-left: 1%;
+  padding-right: 1%; */
+  height: 90%;
+  background-color: #23232376;
+  border-radius: 20px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 10px; */
+  /* padding-top: 15px; */
+}
+
+.item-con::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.build-filter {
+  width: 30%;
+  height: 40px;
+  /* background-color: blueviolet; */
+  position: relative;
+  left: 40%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+}
+
+.build-btn-active{
+   /* width: 20%; */
+   flex: 1;
+   height: 100%;
+   /* background-color: white; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-family: "Bungee";
+   font-size: 13pt;
+   cursor: pointer;
+   border-bottom: solid 3px #ddfd5c;
+}
+
+.build-filter-body-btn {
+  /* width: 20%; */
+  flex: 1;
+  height: 100%;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Bungee";
+  font-size: 13pt;
+  cursor: pointer;
+}
+
+.build-filter-body-btn:hover {
+  border-bottom: solid 3px #ddfd5c;
+}
+
+.build-filter-wheels-btn {
+  /* width: 20%; */
+  flex: 1;
+  height: 100%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Bungee";
+  font-size: 13pt;
+  cursor: pointer;
+}
+
+.build-filter-wheels-btn:hover {
+  border-bottom: solid 3px #ddfd5c;
+}
+
+.build-filter-arials-btn {
+  /* width: 20%; */
+  flex: 1;
+  height: 100%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Bungee";
+  font-size: 13pt;
+  cursor: pointer;
+}
+
+.build-filter-arials-btn:hover {
+  border-bottom: solid 3px #ddfd5c;
+}
+
+.build-filter-craft-btn {
+  /* width: 20%; */
+  flex: 1;
+  height: 100%;
+  background-color: #ddfd5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: "Bungee";
+  font-size: 13pt;
+  cursor: pointer;
+}
+
+
+#canvas{
+  position: absolute;
+  z-index: -1;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  opacity:1;
+}
+
+#model-controls{
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  z-index: 1;
+  background-color: #ddfd5c;
+}
+
+#model-con{
+  position: relative;
+  border-radius: 20px;
+  /* background-color: #ddfd5c; */
+   background-color: #23232300;
+   /* background-color: #232323; */
+   z-index: 1;
+}
+
+#controls{
+  border: none;
+}
+
+.model-background-img{
+  width: 100%;
+  height: 100%;
+  /* background-color: #ddfd5c; */
+  position: absolute;
+  z-index: -1;
+  border-radius: 20px;
+  /* background-image: url(../../../assets/00.jpg); */
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+.item-card {
+  width: 95%;
+  height: 450px;
+  background-color: white;
+  margin-top: 8px;
+  /* flex: 5; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  color: black;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  font-family: "Bungee";
+  font-size: 14pt;
+}
+
+.img-con {
+  width: 90%;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  border: solid black 5px;
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-con p {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 90%;
+  font-family: "Bungee";
+}
+
+.item-img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.item-btn-con {
+  width: 90%;
+  height: 10%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* background-color: black; */
+  /* border: solid black 3px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.view-btn {
+  font-family: "Bungee";
+  font-size: 11pt;
+}
+
+.item-btn-use:hover {
+  color: white;
+  background-color: black;
+}
+
+.item-btn-remove:hover {
+  color: white;
+  background-color: black;
+}
+
+.item-btn-use{
+  width: 46%;
+  height: 100%;
+  border: solid black 3px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-btn-remove{
+  width: 46%;
+  height: 100%;
+  border: solid black 3px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-type{
+  font-family: "Bungee";
+}
+
+.card-infos-con {
+  width: 80%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(35, 35, 35);
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.card-info-con {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: orange; */
+  font-weight: bold;
+  /* margin-bottom: 15px; */
+  color: white;
+}
+
+
+.selected-item-con{
+  width: 30%;
+  /* background-color: pink; */
+  color: black;
+  position: absolute;
+  z-index: 1;
+  left: 2%;
+  top: 3%;
+  /* transform: translateX(-50%); */
+  font-family: Bungee;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  gap: 5%;
+}
+.selected-item-con p{
+margin-bottom: 5%;
+color: rgba(0, 0, 0, 0.746);
+}

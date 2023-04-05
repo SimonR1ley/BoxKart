@@ -1,0 +1,80 @@
+.item-card {
+    width: 250px;
+    height: 330px;
+    background-color: white;
+    margin-top: 8px;
+    /* flex: 5; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 20px;
+  }
+  
+  .item-name {
+    color: black;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-family: "Bungee";
+    font-size: 14pt;
+  }
+  
+  .item-img {
+    width: 90%;
+    height: 70%;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 3%;
+  }
+  
+  .item-btn-con {
+    width: 90%;
+    height: 10%;
+    /* background-color: black; */
+    /* border: solid black 3px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+  }
+  
+  .view-btn {
+    font-family: "Bungee";
+    font-size: 11pt;
+  }
+  
+  .item-btn-use:hover {
+    color: white;
+    background-color: black;
+  }
+
+  .item-btn-remove:hover {
+    color: white;
+    background-color: black;
+  }
+
+  .item-btn-use{
+    width: 46%;
+    height: 100%;
+    border: solid black 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-btn-remove{
+    width: 46%;
+    height: 100%;
+    border: solid black 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  

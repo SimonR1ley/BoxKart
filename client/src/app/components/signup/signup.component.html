@@ -1,0 +1,59 @@
+<a routerLink="/">Return</a>
+
+<div class="header-con">
+  <h1 class="signup-heading">Signup</h1>
+</div>
+
+<div class="signup-con">
+  <!-- <form class="form-con" [formGroup]="newPost" (ngSubmit)="addData()"></form> -->
+  <div class="content">
+    <form class="form-con">
+      <input
+        id="username"
+        name="username"
+        class="inputs"
+        placeholder="Username"
+        formControlName="username"
+      />
+      <input
+        id="name"
+        name="name"
+        class="inputs"
+        placeholder="Name"
+        formControlName="name"
+      />
+      <input
+        id="surname"
+        name="surname"
+        class="inputs"
+        placeholder="Surname"
+        formControlName="surname"
+      />
+      <input
+        id="email"
+        name="email"
+        class="inputs"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <input
+        id="password"
+        name="password"
+        class="inputs"
+        placeholder="Password"
+        formControlName="password"
+      />
+    </form>
+
+    <div class="btn-con">
+        <div class="signin-btn">Create my Account</div>
+        <!-- <p class="or">OR</p> -->
+        <div class="login-btn"><a routerLink="/login">I Have an Account</a></div>
+    </div>
+    <!-- <div class="btn-con-login">
+        <p class="login-btn">or</p>
+        <p class="login-btn">Login</p>
+    </div> -->
+
+  </div>
+</div>

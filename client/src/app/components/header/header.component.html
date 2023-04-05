@@ -1,0 +1,11 @@
+<div class="nav">
+<img class="nav-logo" src="../../../assets/Logo.png"/>
+<div class="nav-options-con">
+    <div [ngClass]="page === 'Home' ? 'nav-link-active' : 'nav-link'"><a  (click)="page = 'Home'"  routerLink="/">Home</a></div>
+    <div [ngClass]="page === 'Inventory' ? 'nav-link-active' : 'nav-link'"><a  (click)="page = 'Inventory'"  routerLink="/inventory">Inventory</a></div>
+    <div [ngClass]="page === 'Build' ? 'nav-link-active' : 'nav-link'"><a  (click)="page = 'Build'"  routerLink="/build">Building</a></div>
+    <div [ngClass]="page === 'Karts' ? 'nav-link-active' : 'nav-link'"><a  (click)="page = 'Karts'"  routerLink="/karts">My Karts</a></div>
+    <div [ngClass]="page === 'Signup' ? 'nav-link-active' : 'nav-link'"><a  (click)="page = 'Signup'"  routerLink="/signup">Signup</a></div>
+</div>
+</div>
+<!-- <div class="location-extra-con"></div> -->

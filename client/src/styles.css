@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0%;
+  margin: 0%;
+  /* background-color: #262626; */
+}
+
+@font-face {
+  font-family: "Bungee";
+  src: url(./assets/fonts/Bungee-Regular.ttf);
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: #2424245c;
+  /* box-shadow: inset 0 0 2000px rgba(29, 29, 29, 0.823);
+    filter: blur(10px); */
+}
+
+.background-img {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-image: url(./assets/background6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+
+.scroll-con {
+  width: 100%;
+  height: 87vh;
+  /* background-color: purple; */
+  overflow: scroll;
+}
+
+.scroll-con::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* About */
+

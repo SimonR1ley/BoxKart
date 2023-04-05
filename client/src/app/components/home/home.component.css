@@ -1,0 +1,97 @@
+.hero-img {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  left: 45%;
+  transform: translateX(-50%);
+}
+
+.hero-img-con {
+  width: 70%;
+  height: 70vh;
+  background-color: #ddfd5c;
+  /* background-image: url(./assets/placeholder.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video{
+  object-fit: cover;
+  /* background-color: #ddfd5c; */
+  width: 98%; 
+  height: 96.5%; 
+  position: absolute;
+  border-radius: 10px;
+  
+}
+
+source{
+  width: 100%;
+  
+}
+
+.hero-btn {
+  width: 200px;
+  height: 60px;
+  background-color: #ddfd5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: "Bungee";
+  font-size: 19pt;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  cursor: pointer;
+}
+
+.about-con {
+  width: 70%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #252525a7;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.about-heading {
+  font-family: "Bungee";
+  font-size: 24pt;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.how-heading {
+  font-family: "Bungee";
+  font-size: 24pt;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.about {
+  font-family: "Bungee";
+  font-size: 16pt;
+  color: white;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+

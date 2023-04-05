@@ -1,0 +1,75 @@
+<!-- <app-item></app-item> -->
+
+<div class="nav-container">
+    <app-header></app-header>
+  </div>
+
+
+  <div class="inventory-heading-con">
+    <h2 [ngClass]="filterAll === 'inventory' ? 'inventory-heading-active' : 'inventory-heading'" (click)="filterAll = 'inventory'" class="inventory-heading">Inventory</h2>
+    <h2 class="inventory-heading">|</h2>
+    <h2 [ngClass]="filterAll === 'locations' ? 'inventory-heading-active' : 'inventory-heading'" (click)="filterAll = 'locations'" class="inventory-heading">Locations</h2>
+
+  </div>
+    <div class="inventory-filter">
+
+      <div [ngClass]="filter === 'All' ? 'filter-active-all' : 'inventory-filter-all-btn'" (click)="filter = 'All'"><p>All</p></div>
+      <div [ngClass]="filter === 'Body' ? 'filter-active' : 'inventory-filter-body-btn'" (click)="filter = 'Body'"><p>Body</p></div>
+      <div [ngClass]="filter === 'Wheel' ? 'filter-active' : 'inventory-filter-wheels-btn'" (click)="filter = 'Wheel'"><p>Wheels</p></div>
+      <div [ngClass]="filter === 'Arial' ? 'filter-active-arials' : 'inventory-filter-arials-btn'" (click)="filter = 'Arial'"><p>Arials</p></div>
+      <div [ngClass]="filter === 'Location' ? 'filter-active-location' : 'inventory-filter-location-btn'" (click)="filter = 'Location'"><p>Location</p></div>
+      <!-- <div class="inventory-filter-craft-btn"><p>CRAFT</p></div> -->
+      <!-- <div class="build-filter-craft-btn"><p>Craft</p></div> -->
+    </div>
+    <div class="scroll-con">
+            <!-- <app-item-card></app-item-card> -->
+         
+            <div class="item-card" *ngFor="let item of Items let i = index">
+              <div class="img-con">
+                <p>{{item.qty}}</p>
+              <img class="item-img" [src]="item.img"/>
+            </div>
+              <h2 class="item-name">{{item.name}} {{item.type}}</h2>
+            
+              <div class="item-btn-con">
+                  <p class="view-btn"><a routerLink="/item" [queryParams]="{ id: item._id, type: item.type, name: item.name, image: item.img, location: item.location}">View</a></p>
+              </div>
+
+              <!-- <div class="card-info">
+                <div class="info">
+                  <p class="item-text-heading">Name</p>
+                <h2 class="item-text">{{item.name}}</h2>
+                <p class="item-text-heading">Location</p>
+                <h2 class="item-text">{{item.location}}</h2>
+                <p class="item-text-heading">Type</p>
+                <h2 class="item-text">{{item.type}}</h2>
+              </div>
+              <div class="edit-con">
+                <h2 class="item-text-edit">Edit</h2>
+
+                <div class="qty-con">
+                  <h2 class="item-text-qty">{{item.qty}}</h2>
+                  <input class="input" placeholder="Quantity" type="number">
+                </div>
+
+                <select>
+                  <option>South Africa</option>
+                  <option>Austrailia</option>
+                  <option>USA</option>
+                </select>
+                <div class="btn-con">
+                  <div class="change-btn">
+                    <p>Update</p>
+                  </div>
+                  <div class="cancel-btn">
+                    <p>Cancel</p>
+                  </div>
+                </div>
+               
+              </div>
+              </div> -->
+          </div>
+
+       
+
+    </div>

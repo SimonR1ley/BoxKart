@@ -1,0 +1,88 @@
+.nav {
+    width: 100vw;
+    height: 13vh;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .nav-logo {
+    /* flex: 1; */
+    margin-left: 3%;
+  }
+  
+  .nav-options-con {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10%;
+  }
+  
+  .nav-link {
+    color: white;
+    font-family: "Bungee";
+    cursor: pointer;
+    /* background-color: orange; */
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+  }
+
+  .nav-link a{
+    color: white;
+    font-family: "Bungee";
+    /* cursor: pointer; */
+    /* background-color: orange; */
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    border-bottom: solid 3px #ddfd5c;
+  }
+
+  .nav-link-active{
+    color: white;
+    font-family: "Bungee";
+    cursor: pointer;
+    /* background-color: orange; */
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    border-bottom: solid 3px #ddfd5c;
+  }
+
+  .nav-link-active a{
+    color: white;
+    font-family: "Bungee";
+    /* cursor: pointer; */
+    /* background-color: orange; */
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  /* .location-extra-con{
+    width: 20vw;
+    height: 13vh;
+    background-color: rgb(32, 32, 32);
+    position: absolute;
+    z-index: 1;
+    left: 33%;
+  } */
