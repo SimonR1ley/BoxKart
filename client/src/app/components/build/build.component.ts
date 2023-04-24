@@ -22,25 +22,16 @@ import { Router } from '@angular/router';
   providers: [ItemdbService],
 })
 export class BuildComponent implements OnInit, AfterViewInit {
-  boxBuild: string = '../../../assets/models/BoxKart.gltf';
+  boxBuild: string = '../../../assets/models/Box.gltf';
 
-  buildUrl: String = '';
-
-  public build = [
-    {
-      body: '',
-      wheels: '',
-      arial: '',
-    },
-  ];
 
   constructor(private itemService: ItemdbService, private router: Router) {}
 
-  filter: String = 'Body';
+  // filter: String = 'Body';
 
-  edit: String = 'Show';
+  // edit: String = 'Show';
 
-  filterAll: String = 'Body';
+  // filterAll: String = 'Body';
 
   allItems: Items[] = [];
 
@@ -56,31 +47,8 @@ export class BuildComponent implements OnInit, AfterViewInit {
   }
 
   get Items() {
-    // if (this.filter === 'All') {
-    //   return this.allItems;
-    // }
-    if (this.filter === 'Body') {
-      return this.allItems.filter((item) =>
-        this.filter === 'Body' ? item.type === 'Body' : !item.type
-      );
-    }
-
-    if (this.filter === 'Wheel') {
-      return this.allItems.filter((item) =>
-        this.filter === 'Wheel' ? item.type === 'Wheel' : !item.type
-      );
-    }
-
-    if (this.filter === 'Arial') {
-      return this.allItems.filter((item) =>
-        this.filter === 'Arial' ? item.type === 'Arial' : !item.type
-      );
-    } else {
-      return null;
-    }
+      return this.allItems;
   }
-
-  craftKart() {}
 
   @ViewChild('canvas') private canvasRef: ElementRef;
 
@@ -155,7 +123,7 @@ export class BuildComponent implements OnInit, AfterViewInit {
       .setAttribute('id', 'controls');
     this.controls = new OrbitControls(this.camera, renderer.domElement);
     this.controls.autoRotate = true;
-    this.controls.enableZoom = false;
+    this.controls.enableZoom = true;
     this.controls.enablePan = false;
     this.controls.update();
   };
@@ -225,351 +193,14 @@ export class BuildComponent implements OnInit, AfterViewInit {
     this.createControls();
   }
 
-  public buildKart(item: any, index: any) {
-    if (item.type === 'Body') {
-      this.build[0] = { ...this.build[0], body: item.name };
-    }
-
-    if (item.type === 'Wheel') {
-      this.build[0] = { ...this.build[0], wheels: item.name };
-    }
-
-    if (item.type === 'Arial') {
-      this.build[0] = { ...this.build[0], arial: item.name };
-    }
-
-    console.log(this.build);
-
-    // -----------Conditions----------
-
-    this.scene.remove(this.model);
-
-    // ---------Bodies---------
-
-    // Box
-
-    if (
-      this.build[0].body === 'Box' &&
-      this.build[0].wheels === '' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/Box.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Fridge
-
-    if (
-      this.build[0].body === 'Fridge' &&
-      this.build[0].wheels === '' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/Fridge.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Coffin
-
-    if (
-      this.build[0].body === 'Coffin' &&
-      this.build[0].wheels === '' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/Coffin.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Bathtub
-
-    if (
-      this.build[0].body === 'Bathtub' &&
-      this.build[0].wheels === '' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/Bathtub.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // ---------Bodies & Wheels---------
-
-    // Body + Doughnut
-
-    // Box + Doughnut
-
-    if (
-      this.build[0].body === 'Box' &&
-      this.build[0].wheels === 'Doughnut' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BoxDoughnutWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Coffin + Doughnut
-
-    if (
-      this.build[0].body === 'Coffin' &&
-      this.build[0].wheels === 'Doughnut' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/CoffinDoughnutWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Fridge + Doughnut
-
-    if (
-      this.build[0].body === 'Fridge' &&
-      this.build[0].wheels === 'Doughnut' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/FridgeDoughnutWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Bathtub + Doughnut
-
-    if (
-      this.build[0].body === 'Bathtub' &&
-      this.build[0].wheels === 'Doughnut' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BathtubDoughnutWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Body + Saw
-
-    // Box + Saw
-
-    if (
-      this.build[0].body === 'Box' &&
-      this.build[0].wheels === 'Saw' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BoxSawWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Coffin + Saw
-
-    if (
-      this.build[0].body === 'Coffin' &&
-      this.build[0].wheels === 'Saw' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/CoffinSawWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Fridge + Saw
-
-    if (
-      this.build[0].body === 'Fridge' &&
-      this.build[0].wheels === 'Saw' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/FridgeSawWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Bathtub + Saw
-
-    if (
-      this.build[0].body === 'Bathtub' &&
-      this.build[0].wheels === 'Saw' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BathtubSawWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Body + Wagon
-
-    // Box + Wagon
-
-    if (
-      this.build[0].body === 'Box' &&
-      this.build[0].wheels === 'Wagon' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BoxWagonWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Coffin + Wagon
-
-    if (
-      this.build[0].body === 'Coffin' &&
-      this.build[0].wheels === 'Wagon' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/CoffinWagonWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Fridge + Wagon
-
-    if (
-      this.build[0].body === 'Fridge' &&
-      this.build[0].wheels === 'Wagon' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/FridgeWagonWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Bathtub + Wagon
-
-    if (
-      this.build[0].body === 'Bathtub' &&
-      this.build[0].wheels === 'Wagon' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BathtubWagonWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Body + Cheese
-
-    // Box + Cheese
-
-    if (
-      this.build[0].body === 'Box' &&
-      this.build[0].wheels === 'Cheese' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BoxCheeseWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Coffin + Cheese
-
-    if (
-      this.build[0].body === 'Coffin' &&
-      this.build[0].wheels === 'Cheese' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/CoffinCheeseWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Fridge + Cheese
-
-    if (
-      this.build[0].body === 'Fridge' &&
-      this.build[0].wheels === 'Cheese' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/FridgeCheeseWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Bathtub + Cheese
-
-    if (
-      this.build[0].body === 'Bathtub' &&
-      this.build[0].wheels === 'Cheese' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BathtubCheeseWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Body + Record
-
-    // Box + Record
-
-    if (
-      this.build[0].body === 'Box' &&
-      this.build[0].wheels === 'Record' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BoxRecordWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Coffin + Record
-
-    if (
-      this.build[0].body === 'Coffin' &&
-      this.build[0].wheels === 'Record' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/CoffinRecordWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Fridge + Record
-
-    if (
-      this.build[0].body === 'Fridge' &&
-      this.build[0].wheels === 'Record' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/FridgeRecordWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Bathtub + Record
-
-    if (
-      this.build[0].body === 'Bathtub' &&
-      this.build[0].wheels === 'Record' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BathtubRecordWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Body + Stone
-
-    // Box + Stone
-
-    if (
-      this.build[0].body === 'Box' &&
-      this.build[0].wheels === 'Stone' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BoxStoneWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Coffin + Stone
-
-    if (
-      this.build[0].body === 'Coffin' &&
-      this.build[0].wheels === 'Stone' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/CoffinStoneWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Fridge + Stone
-
-    if (
-      this.build[0].body === 'Fridge' &&
-      this.build[0].wheels === 'Stone' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/FridgeStoneWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // Bathtub + Stone
-
-    if (
-      this.build[0].body === 'Bathtub' &&
-      this.build[0].wheels === 'Stone' &&
-      this.build[0].arial === ''
-    ) {
-      this.boxBuild = '../../../assets/models/BathtubStoneWheels.gltf';
-      this.reloadScene(this.boxBuild);
-    }
-
-    // ---------Bodies & Wheels & Arials---------
+   buildKart(model: string) {
+     this.scene.remove(this.model);
+    this.boxBuild = model;
+    this.reloadScene(this.boxBuild);
   }
+
+
+ 
 
   reloadScene(boxBuild: string) {
     this.loaderGLTF.load(boxBuild, (gltf: GLTF) => {
@@ -581,4 +212,6 @@ export class BuildComponent implements OnInit, AfterViewInit {
       this.scene.add(this.model);
     });
   }
+
+
 }

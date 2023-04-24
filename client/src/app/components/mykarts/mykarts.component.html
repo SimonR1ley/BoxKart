@@ -1,54 +1,52 @@
 <div class="nav-container">
-    <app-header></app-header>
-  </div>
-  
-  <div class="build-con-pos">
-    <div class="build-con">
-      <div id="model-con">
-        <div class="model-background-img"></div>
-        <div class="selected-item-con" *ngFor="let item of build">
-          <p>Body : {{item.body}}</p>
-          <p>Wheel : {{item.wheels}}</p>
-          <p>Arial : {{item.arial}}</p>
-        </div>
-        <canvas #canvas id="canvas"> </canvas>
-      </div>
-  
-      <div class="item-con">
-        <div class="item-card" *ngFor="let item of Items; let i = index">
-          <h2 class="item-name">{{ item.name }}</h2>
-          <div class="img-con">
-            <p>{{ item.qty }}</p>
-            <img class="item-img" [src]="item.img" />
-          </div>
-          <p class="item-type">{{item.type}}</p>
-          <div class="card-infos-con">
-            <div class="card-info-con">
-              <p>Location</p>
-              <p>|</p>
-              <p>{{item.location}}</p>
-            </div>
-          </div>
-          <div class="item-btn-con">
-            <div class="item-btn-use" (click)="buildKart(item, i)" >
-              <p class="view-btn">Use</p>
-            </div>
-            <!-- <div class="item-btn-remove">
-              <p class="view-btn">Remove</p>
-            </div> -->
-          </div>
-        </div>
-  
-      </div>
+  <app-header></app-header>
+</div>
+
+<div class="build-con-pos">
+  <div class="build-con">
+    <div id="model-con">
+      <div class="model-background-img"></div>
+      <canvas #canvas id="canvas"> </canvas>
     </div>
+
+    <!-- Build Cards, Need to upload Data  -->
+
+    <div class="item-con">
+      <div class="item-card" *ngFor="let build of listOfBuilds">
+        <h2 class="item-number">#{{ build.buildNumber }}</h2>
+        <h2 class="item-name">{{ build.buildName}}</h2>
+        <div class="img-con">
+          <img class="item-img" [src]="build.image" />
+        </div>
+        <!-- <p class="item-type">{{item.type}}</p> -->
+        <div class="card-infos-con" *ngFor="let part of build.parts">
+          <div class="card-info-con" >
+            <p class="needed-parts">Need {{part.amountNeeded}} {{part.partId.name}}'s </p>
+            <p> {{part.partId.qtyGarage}} {{part.partId.name}}'s' available</p>
+          </div>
+        </div>
+    
+
+          <div class="item-btn-con">
+            <!-- <div  class="item-btn-use" (click)="craftKart(build._id!)"> -->
+              <p class="amount-builds">Builds | {{build.amount}}</p>
+              <button *ngIf="build.craftable" class="item-btn-use" (click)="buildKart(build._id!)" >
+                <p class="view-btn">Build</p>
+              </button>
+              <button class="item-btn-view" (click)="viewModel(build.buildModel)" >
+                <p class="view-btn">View Kart</p>
+              </button>
+          </div>
+        </div>
+      </div>
+
+
+
   </div>
-  
-  <div class="build-filter">
-  
-    <div [ngClass]="filter === 'Stock' ? 'build-btn-active' : 'build-filter-body-btn'" (click)="filter = 'Stock'"><p>Stock</p></div>
-    <div [ngClass]="filter === 'Karts' ? 'build-btn-active' : 'build-filter-wheels-btn'" (click)="filter = 'Karts'"><p>My Karts</p></div>
-    <!-- <div [ngClass]="filter === 'Arial' ? 'build-btn-active' : 'build-filter-arials-btn'" (click)="filter = 'Arial'"><p>Arials</p></div> -->
-    <!-- <div class="build-filter-craft-btn"><p>CRAFT</p></div> -->
-    <!-- <div class="build-filter-craft-btn"><p>Craft</p></div> -->
-  </div>
-  
+</div>
+
+<!-- <div class="build-filter">
+  <div [ngClass]="filter === 'Builds' ? 'build-btn-active' : 'build-filter-wheels-btn'" (click)="filter = 'Builds'"><p>Builds</p></div>
+  <div [ngClass]="filter === 'Craft' ? 'build-btn-active' : 'build-filter-body-btn'" (click)="filter = 'Craft'"><p>Craft</p></div>
+</div> -->
+

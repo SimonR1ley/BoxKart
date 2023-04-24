@@ -7,10 +7,14 @@ import { ItemComponent } from './components/item/item.component';
 import { LoginComponent } from './components/login/login.component';
 import { MykartsComponent } from './components/mykarts/mykarts.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { BuildsComponent } from './components/builds/builds.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
+    path: '', component: LoginComponent
+  },
+  {
+    path: 'home', component: HomeComponent
   },
   {
     path: 'inventory', component: InventoryComponent
@@ -19,11 +23,12 @@ const routes: Routes = [
     path: 'build', component: BuildComponent
   },
   {
-    path: 'signup', component: SignupComponent
+    path: 'builds', component: BuildsComponent
   },
   {
-    path: 'login', component: LoginComponent
+    path: 'signup', component: SignupComponent
   },
+  
   {
     path: 'item', component: ItemComponent
   },

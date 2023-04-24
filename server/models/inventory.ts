@@ -1,11 +1,14 @@
 import { prop, getModelForClass } from "@typegoose/typegoose";
 
-class Inventory {
+export class Inventory {
+    
+    @prop({required: false})
+    public userId?: string;
+    
+    // @prop({required: true})
+    // public location?: string;
     @prop({required: true})
     public name?: string;
-
-    @prop({required: true})
-    public location?: string;
     
     @prop({required: true})
     public type?: string;
@@ -14,8 +17,22 @@ class Inventory {
     public img?: string;
 
     @prop({required: true})
-    public qty?: number;
+    public modelLink?: string;
 
+    @prop({required: true})
+    public qtySA?: number;
+
+    @prop({required: true})
+    public qtyUSA?: number;
+
+    @prop({required: true})
+    public qtyAus?: number;
+
+    @prop({required: true})
+    public qtyGarage?: number;
+
+    @prop({required: true})
+    public amount?: number;
 
 
 

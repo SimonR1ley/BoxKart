@@ -27,12 +27,14 @@
     color: white;
     font-family: "Bungee";
     cursor: pointer;
-    /* background-color: orange; */
+    background-color: rgba(255, 166, 0, 0);
     height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 20%;
+    border: none;
+    font-size: 11pt;
   }
 
   .nav-link a{

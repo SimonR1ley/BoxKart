@@ -1,0 +1,23 @@
+<!-- <app-item></app-item> -->
+
+<div class="nav-container">
+  <app-header></app-header>
+</div>
+
+<div class="heading-back">
+  <h2 class="builds-heading">Possible Builds</h2>
+</div>
+
+<div class="scroll-con">
+  <div class="card-con" *ngFor="let build of listOfBuilds">
+    <h2 class="build-number">{{build.buildNumber}}</h2>
+    <h2 class="build-name">{{build.buildName}}</h2>
+    <img class="img" [src]="build.image" />
+    <div class="info-con">
+      <p class="cost">cost</p>
+      <div class="stats" *ngFor="let part of build.parts">
+        <p class="stat">{{part.partId.name}}  |  {{part.amountNeeded}}</p>
+      </div>
+    </div>
+  </div>
+</div>

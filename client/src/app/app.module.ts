@@ -22,6 +22,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ItemComponent } from './components/item/item.component';
 import { MykartsComponent } from './components/mykarts/mykarts.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { BuildsComponent } from './components/builds/builds.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,12 +40,14 @@ import { MykartsComponent } from './components/mykarts/mykarts.component';
     LoginComponent,
     ItemComponent,
     MykartsComponent,
+    BuildsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StlModelViewerModule
+    StlModelViewerModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
@@ -51,3 +56,7 @@ import { MykartsComponent } from './components/mykarts/mykarts.component';
 
 
 export class AppModule { }
+
+export function getLocalStorage() {
+  return (typeof window !== "undefined") ? window.localStorage : null;
+}

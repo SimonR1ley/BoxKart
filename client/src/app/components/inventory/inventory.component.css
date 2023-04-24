@@ -1,6 +1,6 @@
 .scroll-con {
-  width: 80%;
-  height: 55vh;
+  width: 95%;
+  height: 75vh;
   background-color: #434343b5;
   overflow: scroll;
   position: relative;
@@ -11,11 +11,12 @@
   padding-left: 2%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 1%;
   /* display: inline-flex; */
   flex-wrap: wrap;
+  margin-top: 3%;
 }
 
 .scroll-con::-webkit-scrollbar {
@@ -211,8 +212,8 @@
 }
 
 .item-card {
-  width: 24%;
-  height: 360px;
+  width: 18%;
+  height: 340px;
   background-color: white;
   margin-bottom: 8px;
   /* flex: 5; */

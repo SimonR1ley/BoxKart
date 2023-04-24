@@ -1,19 +1,9 @@
-.hero-img {
-  width: 80%;
-  height: 100%;
-  position: absolute;
-  left: 45%;
-  transform: translateX(-50%);
-}
+
 
 .hero-img-con {
-  width: 70%;
-  height: 70vh;
-  background-color: #ddfd5c;
-  /* background-image: url(./assets/placeholder.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+  width: 80%;
+  height: 55vh;
+  /* background-color: #ddfd5c; */
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -22,6 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  flex-direction: row;
 }
 
 video{
@@ -42,7 +34,7 @@ source{
 .hero-btn {
   width: 200px;
   height: 60px;
-  background-color: #ddfd5c;
+  /* background-color: #ddfd5c; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,14 +48,14 @@ source{
 }
 
 .about-con {
-  width: 70%;
+  width: 80%;
   height: auto;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 2%;
   margin-bottom: 2%;
-  background-color: #252525a7;
+  /* background-color: #313131; */
   border-radius: 20px;
   padding: 20px;
 }
@@ -87,11 +79,48 @@ source{
 }
 
 .about {
-  font-family: "Bungee";
+  /* font-family: "Bungee"; */
   font-size: 16pt;
   color: white;
   letter-spacing: 2px;
   word-spacing: 5px;
+  font-weight: bold;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
+.hero-img{
+  width: 98.5%;
+  height: 97%;
+  background-image: url(../../../assets/BuildImages/boxwagon.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+
+  border-radius: 15px;
+  
+}
+
+.hero-img-two{
+  width: 98.5%;
+  height: 97%;
+  background-image: url(../../../assets/BuildImages/fridgerecord.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+
+  border-radius: 15px;
+  
+}
+
+.content-overlay{
+  width: 90%;
+  background-color: #2a2a2adf;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}

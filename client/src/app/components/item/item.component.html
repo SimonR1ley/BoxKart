@@ -1,25 +1,153 @@
 <div class="nav-container">
-    <app-header></app-header>
-  </div>
+  <app-header></app-header>
+</div>
 
 <div class="item-modal-opacity">
-    <!-- <p class="view-item-return">Close</p> -->
-    <h2 class="view-item-name">{{name}}</h2>
-    <div class="item-con">
-        <img class="view-item-img" [src]="image"/>
-        <div class="information-con">
-            <p class="item-type">Category : {{type}}</p>
-            <p class="item-location">Location : {{location}}</p>
-            <select aria-placeholder="Change Location">
-                <option>Change Location</option>
-                <option>South Africa</option>
-                <option>Austrailia</option>
-                <option>United States</option>
-                <option>My Garage</option>
-            </select>
-            <p class="item-qty">Quantity : 5</p>
-            <input type="number" placeholder="qty">
-            <div class="save-btn">SAVE</div>
+  <!-- <p class="view-item-return">Close</p> -->
+
+  <h2 class="view-item-name">{{ name }} {{ type }}</h2>
+  <div class="item-con">
+    <img class="view-item-img" [src]="image" />
+    <div class="information-con">
+      <!-- <div [ngClass]="filter === 'All' ? 'filter-active-all' : 'inventory-filter-all-btn'" (click)="filter = 'All'"><p>All</p></div> -->
+      <div class="management">
+        <div
+          [ngClass]="filter === 'manage' ? 'selected-btn' : 'manage-btn'"
+          (click)="filter = 'manage'"
+        >
+          Manage
         </div>
+        <div
+          [ngClass]="filter === 'move' ? 'selected-btn' : 'move-btn'"
+          (click)="filter = 'move'"
+        >
+          Move
+        </div>
+      </div>
+
+      <div class="filtered" *ngIf="filter === 'move'">
+        <p class="item-location">
+          SA : {{ qtySA }} &nbsp; | &nbsp; USA : {{ qtyUSA }} &nbsp; | &nbsp;
+          AUS : {{ qtyAus }} &nbsp; | &nbsp; Garage : {{ qtyGarage }}
+        </p>
+
+        <p class="options-heading">Move From</p>
+        <div class="options">
+          <div
+            [ngClass]="from === 'SA' ? 'selected-option' : 'option'"
+            (click)="from = 'SA'"
+            class="option"
+          >
+            SA
+          </div>
+          <div
+            [ngClass]="from === 'USA' ? 'selected-option' : 'option'"
+            (click)="from = 'USA'"
+            class="option"
+          >
+            USA
+          </div>
+          <div
+            [ngClass]="from === 'Aus' ? 'selected-option' : 'option'"
+            (click)="from = 'Aus'"
+            class="option"
+          >
+            Aus
+          </div>
+          <div
+            [ngClass]="from === 'Garage' ? 'selected-option' : 'option'"
+            (click)="from = 'Garage'"
+            class="option"
+          >
+            Garage
+          </div>
+        </div>
+
+        <p class="options-heading">Move To</p>
+
+        <div class="options">
+          <div
+            [ngClass]="to === 'SA' ? 'selected-option' : 'option'"
+            (click)="to = 'SA'"
+            class="option"
+          >
+            SA
+          </div>
+          <div
+            [ngClass]="to === 'USA' ? 'selected-option' : 'option'"
+            (click)="to = 'USA'"
+            class="option"
+          >
+            USA
+          </div>
+          <div
+            [ngClass]="to === 'Aus' ? 'selected-option' : 'option'"
+            (click)="to = 'Aus'"
+            class="option"
+          >
+            Aus
+          </div>
+          <div
+            [ngClass]="to === 'Garage' ? 'selected-option' : 'option'"
+            (click)="to = 'Garage'"
+            class="option"
+          >
+            Garage
+          </div>
+        </div>
+
+        <!-- <p class="item-qty">Quantity : 5</p> -->
+        <form class="submit-btn" [formGroup]="newStock" (ngSubmit)="move()">
+          <input
+            class="qty-input"
+            type="number"
+            placeholder="qty"
+            formControlName="qty"
+          />
+          <input type="submit" class="save-btn" value="Move" />
+        </form>
+      </div>
+
+      <div class="filtered" *ngIf="filter === 'manage'">
+        <p class="item-location">
+          SA : {{ qtySA }} &nbsp; | &nbsp; USA : {{ qtyUSA }} &nbsp; | &nbsp;
+          AUS : {{ qtyAus }} &nbsp; | &nbsp; Garage : {{ qtyGarage }}
+        </p>
+
+        <p class="options-heading">Add To?</p>
+        <div class="options">
+          <div
+            [ngClass]="to === 'SA' ? 'selected-option' : 'option'"
+            (click)="to = 'SA'"
+            class="option"
+          >
+            SA
+          </div>
+          <div
+            [ngClass]="to === 'USA' ? 'selected-option' : 'option'"
+            (click)="to = 'USA'"
+            class="option"
+          >
+            USA
+          </div>
+          <div
+            [ngClass]="to === 'Aus' ? 'selected-option' : 'option'"
+            (click)="to = 'Aus'"
+            class="option"
+          >
+            Aus
+          </div>
+        </div>
+        <form class="submit-btn" [formGroup]="newStock" (ngSubmit)="manage()">
+          <input
+            class="qty-input"
+            type="number"
+            placeholder="qty"
+            formControlName="qty"
+          />
+          <input type="submit" class="save-btn" value="ADD" />
+        </form>
+      </div>
     </div>
+  </div>
 </div>

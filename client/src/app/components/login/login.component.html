@@ -7,7 +7,7 @@
 <div class="signup-con">
   <!-- <form class="form-con" [formGroup]="newPost" (ngSubmit)="addData()"></form> -->
   <div class="content">
-    <form class="form-con">
+    <form class="form-con" [formGroup]="userCheck" (ngSubmit)="login()">
       <input
         id="username"
         name="username"
@@ -25,23 +25,28 @@
       />
       <input
         id="password"
-        type="password"
         name="password"
         class="inputs"
         placeholder="Password"
         formControlName="password"
       />
+      <div class="btn-con">
+        <input type="submit" class="login-btn" value="Login" />
+        <div class="signin-btn">
+          <a routerLink="/signup">Create my Account</a>
+        </div>
+        <!-- <p class="or">OR</p> -->
+      </div>
     </form>
 
-    <div class="btn-con">
-        <div class="login-btn">Login</div>
-        <div class="signin-btn"><a routerLink="/signup">Create my Account</a></div>
-        <!-- <p class="or">OR</p> -->
-    </div>
     <!-- <div class="btn-con-login">
         <p class="login-btn">or</p>
         <p class="login-btn">Login</p>
     </div> -->
-
   </div>
+</div>
+
+<div *ngIf="mayPass === true" class="confirmation">
+  <p class="allsetheading">Welcome</p>
+  <div class="continue-btn"><a routerLink="home">Continue</a></div>
 </div>
