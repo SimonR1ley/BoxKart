@@ -1,25 +1,42 @@
 <!-- <app-item></app-item> -->
 
 <div class="nav-container">
-    <app-header></app-header>
-  </div>
+  <app-header></app-header>
+</div>
 
+<div class="heading-back">
+  <h2 class="builds-heading">My Inventory</h2>
+</div>
+<div class="scroll-con">
+  <!-- <app-item-card></app-item-card> -->
 
-    <div class="scroll-con">
-            <!-- <app-item-card></app-item-card> -->
-         
-            <div class="item-card" *ngFor="let item of Items let i = index">
-              <div class="img-con">
-                <!-- <p>{{item.qty}}</p> -->
-              <img class="item-img" [src]="item.img"/>
-            </div>
-              <h2 class="item-name">{{item.name}} {{item.type}}</h2>
-            
-              <div class="item-btn-con">
-                  <p class="view-btn"><a routerLink="/item" [queryParams]="{ id: item._id, type: item.type, name: item.name, image: item.img, qtySA: item.qtySA, qtyUSA: item.qtyUSA, qtyAus: item.qtyAus, qtyGarage: item.qtyGarage}">View</a></p>
-              </div>
+  <div class="item-card" *ngFor="let item of Items; let i = index">
+    <div class="img-con">
+      <!-- <p>{{item.qty}}</p> -->
+      <img class="item-img" [src]="item.img" />
+    </div>
+    <h2 class="item-name">{{ item.name }} {{ item.type }}</h2>
 
-              <!-- <div class="card-info">
+    <div class="item-btn-con">
+      <p class="view-btn">
+        <a
+          routerLink="/item"
+          [queryParams]="{
+            id: item._id,
+            type: item.type,
+            name: item.name,
+            image: item.img,
+            qtySA: item.qtySA,
+            qtyUSA: item.qtyUSA,
+            qtyAus: item.qtyAus,
+            qtyGarage: item.qtyGarage
+          }"
+          >View</a
+        >
+      </p>
+    </div>
+
+    <!-- <div class="card-info">
                 <div class="info">
                   <p class="item-text-heading">Name</p>
                 <h2 class="item-text">{{item.name}}</h2>
@@ -52,8 +69,5 @@
                
               </div>
               </div> -->
-          </div>
-
-       
-
-    </div>
+  </div>
+</div>

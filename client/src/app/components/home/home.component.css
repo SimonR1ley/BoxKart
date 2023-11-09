@@ -1,13 +1,11 @@
-
-
 .hero-img-con {
   width: 80%;
   height: 55vh;
-  /* background-color: #ddfd5c; */
+  background-color: #ddfd5c;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 2%;
+  /* margin-top: 2%; */
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -16,19 +14,17 @@
   flex-direction: row;
 }
 
-video{
+video {
   object-fit: cover;
   /* background-color: #ddfd5c; */
-  width: 98%; 
-  height: 96.5%; 
+  width: 98%;
+  height: 96.5%;
   position: absolute;
   border-radius: 10px;
-  
 }
 
-source{
+source {
   width: 100%;
-  
 }
 
 .hero-btn {
@@ -48,24 +44,38 @@ source{
 }
 
 .about-con {
-  width: 80%;
+  width: 70%;
   height: auto;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 2%;
-  margin-bottom: 2%;
+  /* position: relative; */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  /* margin-top: 2%;
+  margin-bottom: 2%; */
   /* background-color: #313131; */
   border-radius: 20px;
   padding: 20px;
+  text-align: center;
+}
+
+.about-con-things {
+  width: 70%;
+  height: auto;
+  /* position: relative; */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  /* margin-top: 2%;
+  margin-bottom: 2%; */
+  /* background-color: #313131; */
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  /* margin-top: 5vh; */
 }
 
 .about-heading {
   font-family: "Bungee";
   font-size: 24pt;
   color: white;
-  margin-top: 80px;
-  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -85,11 +95,11 @@ source{
   letter-spacing: 2px;
   word-spacing: 5px;
   font-weight: bold;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-
-.hero-img{
+.hero-img {
   width: 98.5%;
   height: 97%;
   background-image: url(../../../assets/BuildImages/boxwagon.png);
@@ -98,10 +108,9 @@ source{
   background-repeat: repeat;
 
   border-radius: 15px;
-  
 }
 
-.hero-img-two{
+.hero-img-two {
   width: 98.5%;
   height: 97%;
   background-image: url(../../../assets/BuildImages/fridgerecord.png);
@@ -110,17 +119,192 @@ source{
   background-repeat: repeat;
 
   border-radius: 15px;
-  
 }
 
-.content-overlay{
-  width: 90%;
-  background-color: #2a2a2adf;
-  padding-top: 10px;
+.content-overlay {
+  width: 94%;
+  /* background-color: #2a2a2adf; */
+  background-color: #232323;
+  padding-top: 5vh;
   padding-bottom: 10px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 20px;
+}
+
+.break {
+  width: 100%;
+  height: 10vh;
+}
+
+.heading-back {
+  background-color: #ddfd5c;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.builds-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: "Bungee";
+  font-size: 25pt;
+  cursor: pointer;
+}
+
+
+#canvas{
+  position: absolute;
+  z-index: -1;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  opacity:1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#model-controls{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: #ddfd5c;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#model-con{
+  width: 45%;
+  height: 60vh;
+  position: relative;
+  border-radius: 20px;
+  /* background-color: #ddfd5c; */
+   background-color: white;
+   /* background-color: #232323; */
+   z-index: 1;
+   /* left: 5%; */
+  margin-top: 5vh;
+  /* border: white solid 5px; */
+  }
+
+#controls{
+  border: none;
+}
+
+.model-background-img{
+  width: 100%;
+  /* height: 100%; */
+  background-color: #ddfd5c;
+  position: absolute;
+  z-index: -1;
+  border-radius: 20px;
+  /* background-image: url(../../../assets/00.jpg); */
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.scroll-con{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+}
+
+.build-con-pos{
+  width: 100%;
+  height: 75vh;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* margin-top: 30px; */
+}
+
+.build-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: gray; */
+  height: 100%;
+  /* gap: 5%; */
+  width: 90%;
+  position: relative; 
+  top: 58%;
+  transform: translateY(-50%);
+}
+
+.top-split{
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 5vh;
+}
+
+.about-top-view{
+  /* background-color: orange; */
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.more-info{
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ddfd5c;
+  font-family: "Bungee";
+  cursor: pointer;
+}
+
+.close-more-info{
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 5vh;
+  background-color: #ddfd5c;
+  font-family: "Bungee";
+  cursor: pointer;
+}
+
+.more-info-modal{
+  width: 100vw;
+  height: 95vh;
+  background-color: #232323;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+  padding-top: 5vh;
+}
+.img-click{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  /* background-color: green; */
+  z-index: 4;
+  bottom: 10px;
+  right: 10px;
+  background-image: url(../../../assets/click.gif);
+  background-size: contain;
 }

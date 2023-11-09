@@ -45,14 +45,13 @@
       />
       <div class="btn-con">
         <input class="signin-btn" type="submit" value="Create my Account" />
-          <div class="login-btn"><a routerLink="/login">I Have an Account</a></div>
+        <div class="login-btn"><a routerLink="/">I Have an Account</a></div>
       </div>
     </form>
   </div>
 </div>
 
-
-  <div *ngIf="statusCheck ==='confirmed'" class="confirmation">
-    <p class="allsetheading">You're all set!</p>
-    <div class="continue-btn"><a routerLink="/">Login</a></div>
-  </div>
+<div *ngIf="statusCheck === 'confirmed'" class="confirmation">
+  <p class="allsetheading">You're all set!</p>
+  <div class="continue-btn"><a routerLink="/">Login</a></div>
+</div>

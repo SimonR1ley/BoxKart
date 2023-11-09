@@ -19,14 +19,14 @@ export class LoginComponent implements OnInit {
   noItems = [];
 
   userCheck = new FormGroup({
-    username: new FormControl(''),
+    // username: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl(''),
   });
 
   ngOnInit() {
     this.itemService.getUsers().subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.users = data;
     });
   }
@@ -51,13 +51,16 @@ export class LoginComponent implements OnInit {
 
       if (
         this.userCheck.value.email == this.users[i].email &&
-        this.userCheck.value.password == this.users[i].password &&
-        this.userCheck.value.username == this.users[i].username
+        this.userCheck.value.password == this.users[i].password 
       ) {
         this.mayPass = true;
 
         if(this.mayPass === true){
           this.access = "Granted"
+        } else {
+          this.access = "Granted"
+          // console.log(this.access);
+          
         }
 
         this.userId = this.users[i]._id || '';

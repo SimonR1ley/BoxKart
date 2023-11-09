@@ -1,7 +1,7 @@
 .scroll-con {
   width: 95%;
-  height: 75vh;
-  background-color: #434343b5;
+  height: 66vh;
+  /* background-color: rgb(32, 32, 32); */
   overflow: scroll;
   position: relative;
   left: 50%;
@@ -16,7 +16,7 @@
   gap: 1%;
   /* display: inline-flex; */
   flex-wrap: wrap;
-  margin-top: 3%;
+  margin-top: 1%;
 }
 
 .scroll-con::-webkit-scrollbar {
@@ -241,9 +241,9 @@
   border-radius: 10px;
   margin-bottom: 3%;
   margin-top: 5%;
-  border: solid black 5px;
+  /* border: solid black 5px; */
   position: relative;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 .img-con p {
@@ -257,21 +257,22 @@
 .item-img {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-radius: 10px;
 }
 
 .item-btn-con {
   width: 85%;
   height: 10%;
-  /* background-color: black; */
-  border: solid black 5px;
+  background-color: black;
+  /* border: solid black 5px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
+  margin-top: 20px;
 }
 
 .view-btn {
@@ -289,10 +290,10 @@
   background-color: black;
 }
 
-a{
+a {
   text-decoration: none;
   /* color: ; */
-  color: black;
+  color: white;
 }
 
 .inventory-heading-con {
@@ -323,7 +324,7 @@ a{
   width: 100%;
 }
 
-.deactivated{
+.deactivated {
   display: none;
 }
 
@@ -378,7 +379,6 @@ input {
   width: 80%;
   height: 100%;
   text-align: center;
-
 }
 
 select {
@@ -394,7 +394,7 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: 'Bungee';
+  font-family: "Bungee";
 }
 
 .cancel-btn {
@@ -405,10 +405,10 @@ select {
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: 'Bungee';
+  font-family: "Bungee";
 }
 
-.qty-con{
+.qty-con {
   width: 95%;
   height: 15%;
   height: auto;
@@ -427,12 +427,31 @@ select {
   margin-left: 5%;
 }
 
-.btn-con{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width: 90%;
-height: 15%;
-margin-top: 5%;
+.btn-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 15%;
+  margin-top: 5%;
 }
 
+.heading-back {
+  background-color: #ddfd5c;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.builds-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: "Bungee";
+  font-size: 25pt;
+  cursor: pointer;
+}
